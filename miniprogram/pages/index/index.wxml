@@ -25,6 +25,12 @@
     </view>
   </view>
 
+  <!-- 两数之和 -->
+  <view class="userinfo">
+    <view>
+      <button class="userinfo-nickname" bindtap="onSumData">点击获取两数之和</button>
+    </view>
+  </view>
 
   <!-- 操作数据库 -->
   <view class="uploader">
