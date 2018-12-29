@@ -14,7 +14,7 @@
 	"condition": {
 		"search": {
 			"current": -1,
-			"list": []
+			"list": [],
 		},
 		"conversation": {
 			"current": -1,
