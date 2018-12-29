@@ -36,14 +36,14 @@ Page({
       name: 'sum',
       data: {
         a: 1,
-        b: 2
+        b: 5
       },
       success: res => {
         wx.showToast({
-          title: '调用成功',
+          title: '调用成功1',
         })
         this.setData({
-          result: JSON.stringify(res.result)
+          result: JSON.stringify(res.result)+"123123"
         })
       },
       fail: err => {
