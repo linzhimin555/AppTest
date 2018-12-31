@@ -1,41 +1,40 @@
 {
-	"miniprogramRoot": "miniprogram/",
-	"cloudfunctionRoot": "cloudfunctions/",
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false
 	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
 	"appid": "wx350b0d02d0baa6dd",
-	"projectname": "123",
-	"libVersion": "2.2.5",
+	"projectname": "appTest",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
 	"condition": {
 		"search": {
 			"current": -1,
-			"list": [],
+			"list": []
 		},
 		"conversation": {
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
 		"game": {
+			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
-				}
-			]
+			"current": -1,
+			"list": []
 		}
 	}
 }
