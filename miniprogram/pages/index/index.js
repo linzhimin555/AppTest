@@ -67,6 +67,23 @@ Page({
     })
   },
 
+  onSumData: function () {
+    //调用云函数计算两数之和
+    wx.cloud.callFunction({
+      name: 'sum',
+      data: {
+        a: 2,
+        b: 3
+      },
+      success: res => {
+        console.log(res.result.sum);
+      },
+      fail: err => {
+        console.log("计算出错");
+      }
+    })
+  },
+
   // 上传图片
   doUpload: function () {
     // 选择图片
