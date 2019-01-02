@@ -53,6 +53,7 @@ Page({
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
 	onReady: function () {
+		
 	},
 	
 	/**
@@ -94,9 +95,21 @@ Page({
 	 * 用户点击右上角分享
 	 */
 	onShareAppMessage: function () {
-
+		
 	},
 	doRegister: function (event) {
+		wx.showLoading({
+			title: 'asd',
+		})
+		wx.hideLoading()
+		wx.showToast({
+		title:'123',
+		})
+		var d = wx.getSystemInfoSync()
+		console.log(d);
+		this.setData({
+			loading:1
+		})
 		console.log(event);
 	},
 })

@@ -1,12 +1,12 @@
 <!--miniprogram/pages/register/register.wxml-->
 <view class="container">
-  用户名：
+  {{d}}用户名：
   <input  type='text' placeholder='用户名' style='border="1" bordercolor="#000000"'> asd</input>
   密码：
   <input type='password' data-sss="123" placeholder='密码'> asd</input>
   再次输入密码：
   <input type='password' data-name='123354' placeholder='密码'> asd</input>
-  <button bindtap="doRegister" data-name="123123"> 注册 </button>
+  <button bindtap="doRegister" loading='{{loading}}' data-name="123123"> 注册 </button>
   <view class="list" style='display:none'>
     <switch wx:for="{{objectArray}}" wx:key="unique"> {{item.id}} </switch>
     <button bindtap="switch"> Switch </button>
