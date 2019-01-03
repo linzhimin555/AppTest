@@ -84,6 +84,19 @@ Page({
     })
   },
 
+  onCustomLogin:function(){
+    wx.cloud.callFunction({
+      name: 'CustomLogin',
+      success: res => {
+        console.log(res.result.message);
+      },
+      fail: err => {
+        console.log(err);
+        console.log("登录遇到问题");
+      }
+    })
+  },
+
   // 上传图片
   doUpload: function () {
     // 选择图片
