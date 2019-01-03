@@ -111,5 +111,38 @@ Page({
 			loading:1
 		})
 		console.log(event);
+		wx.request({
+
+			url: 'https://www.baidu.com',
+
+			success: function (res) {
+
+				console.log(res)// 服务器回包信息
+			}
+		})
+		wx.setStorage({
+			key: 'key1',
+			data:"key123123",
+			success: function (res) {
+				// 异步接口在success回调才能拿到返回值
+				var value1 = res.data
+				console.log('success')
+				wx.getStorage({
+					key: 'key1',
+					success: function (res) {
+						// 异步接口在success回调才能拿到返回值
+						var value1 = res.data
+						console.log(value1)
+					},
+					fail: function () {
+						console.log('读取key1发生错误')
+					}
+				})
+			},
+			fail: function () {
+				console.log('读取key1发生错误')
+			}
+		})
+
 	},
 })

@@ -1,46 +1,42 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false
 	},
-	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
 	"appid": "wx350b0d02d0baa6dd",
-	""projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8FTest",
+	"projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F",
 	"libVersion": "2.2.5",
-
-
 	"condition": {
 		"search": {
 			"current": -1,
-<<<<<<< HEAD
 			"list": []
 		},
 		"conversation": {
 			"current": -1,
-=======
->>>>>>> b99cdad9fadb80f13e19f77b9857fd590c047ecd
 			"list": []
 		},
-		"conversation": {
+		"plugin": {
 			"current": -1,
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide"
+				}
+			]
 		}
 	}
 }
