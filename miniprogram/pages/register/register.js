@@ -98,51 +98,108 @@ Page({
 		
 	},
 	doRegister: function (event) {
-		wx.showLoading({
-			title: 'asd',
-		})
-		wx.hideLoading()
-		wx.showToast({
-		title:'123',
-		})
-		var d = wx.getSystemInfoSync()
-		console.log(d);
-		this.setData({
-			loading:1
-		})
-		console.log(event);
-		wx.request({
+		const db = wx.cloud.database();
+		const message = "用户名或者密码错误";
+		var d = db.collection("user").where({
+			'UserName': 'agan',
+			'Password': '123456'
+		}).get();
 
-			url: 'https://www.baidu.com',
+		console.log(d)
 
-			success: function (res) {
 
-				console.log(res)// 服务器回包信息
-			}
-		})
-		wx.setStorage({
-			key: 'key1',
-			data:"key123123",
-			success: function (res) {
-				// 异步接口在success回调才能拿到返回值
-				var value1 = res.data
-				console.log('success')
-				wx.getStorage({
-					key: 'key1',
-					success: function (res) {
-						// 异步接口在success回调才能拿到返回值
-						var value1 = res.data
-						console.log(value1)
-					},
-					fail: function () {
-						console.log('读取key1发生错误')
-					}
-				})
-			},
-			fail: function () {
-				console.log('读取key1发生错误')
-			}
-		})
+
+
+
+
+
+
+
+		// wx.cloud.callFunction({
+		// 	name: 'CustomLogin',
+		// 	success: res => {
+		// 		console.log(res);
+		// 		wx.showToast({
+		// 			title: '调用成功1',
+		// 		})
+		// 		this.setData({
+		// 			result: JSON.stringify(res.result) + "123123"
+		// 		})
+		// 	},
+		// 	fail: err => {
+		// 		wx.showToast({
+		// 			icon: 'none',
+		// 			title: '调用失败',
+		// 		})
+		// 		console.error('[云函数] [sum] 调用失败：', err)
+		// 	}
+		// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		// wx.showLoading({
+		// 	title: 'asd',
+		// })
+		// wx.hideLoading()
+		// wx.showToast({
+		// title:'123',
+		// })
+		// var d = wx.getSystemInfoSync()
+		// console.log(d);
+		// this.setData({
+		// 	loading:1
+		// })
+		// console.log(event);
+		// wx.request({
+
+		// 	url: 'https://www.baidu.com',
+
+		// 	success: function (res) {
+
+		// 		console.log(res)// 服务器回包信息
+		// 	}
+		// })
+		// wx.setStorage({
+		// 	key: 'key1',
+		// 	data:"key123123",
+		// 	success: function (res) {
+		// 		// 异步接口在success回调才能拿到返回值
+		// 		var value1 = res.data
+		// 		console.log('success')
+		// 		wx.getStorage({
+		// 			key: 'key1',
+		// 			success: function (res) {
+		// 				// 异步接口在success回调才能拿到返回值
+		// 				var value1 = res.data
+		// 				console.log(value1)
+		// 			},
+		// 			fail: function () {
+		// 				console.log('读取key1发生错误')
+		// 			}
+		// 		})
+		// 	},
+		// 	fail: function () {
+		// 		console.log('读取key1发生错误')
+		// 	}
+		// })
 
 	},
 })

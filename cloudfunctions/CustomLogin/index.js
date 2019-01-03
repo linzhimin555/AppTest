@@ -9,6 +9,7 @@ exports.main = async (event, context) => {
   const {opendId,appid}=cloud.getWXContext();
   const db = wx.cloud.database();
   const message="用户名或者密码错误";
+	console.log("12")
   db.collection('user').where({
     UserName:'agan',
     Password:'123456'
