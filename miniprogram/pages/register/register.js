@@ -61,10 +61,10 @@ Page({
   onShareAppMessage: function() {
 
   },
-  doRegister: function(event) {
+	doRegister: function(event) {
 
-		let {form} = this.data;
-		console.log(form);
+		//let form = ;
+		console.log(event.detail);
 		return ;
     const db = wx.cloud.database();
     db.collection("counters").doc(data.data[i]._id).remove({ success: function (data) { data }, fail: function (err) { console.log(err) } });

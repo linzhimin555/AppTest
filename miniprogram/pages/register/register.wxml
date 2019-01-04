@@ -2,14 +2,14 @@
 <view class="container">
 
 
-<form>
+<form bindsubmit="doRegister" id='asdsa'>
   {{d}}用户名：
-  <input  type='text' placeholder='用户名' data-name='mobile' style='border="1" bordercolor="#000000"'> asd</input>
+  <input  type='text' name='12322' placeholder='用户名' data-name='mobile' style='border="1" bordercolor="#000000"'> asd</input>
   密码：
-  <input type='password' data-name='mobile1' placeholder='密码'> asd</input>
+  <input type='password' name='fds' data-name='mobile1' placeholder='密码'> asd</input>
   再次输入密码：
-  <input type='password' data-name='123354' placeholder='密码'> asd</input>
-  <button bindtap="doRegister" loading='{{loading}}' data-name="123123"> 注册 </button>
+  <input type='password' name ='asdsad' data-name='123354' placeholder='密码'> asd</input>
+  <button loading='{{loading}}' formType="submit" id='kasldjasd' value='skajd' name ='regi' > 注册 </button>
 	</form>
 
   <view class="list" style='display:none'>
